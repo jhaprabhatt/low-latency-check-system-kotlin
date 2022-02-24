@@ -1,0 +1,6 @@
+# Project exclude paths
+/low-latency-consumer/target/
+/low-latency-event/target/
+/low-latency-service/target/
+/.idea/
+*.iml
