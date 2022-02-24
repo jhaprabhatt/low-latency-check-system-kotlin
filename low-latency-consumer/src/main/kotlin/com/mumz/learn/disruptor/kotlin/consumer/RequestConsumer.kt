@@ -10,8 +10,8 @@ class RequestConsumer(val responseRingBuffer: RingBuffer<Response>) :
     override fun onEvent(event: Request, sequence: Long, endOfBatch: Boolean) {
         produce(
             event.id, event.name, when {
-                endOfBatch -> "Before Batch"
-                else -> "End of Batch"
+                endOfBatch -> "End of Batch"
+                else -> "Before Batch"
             }
         )
     }
